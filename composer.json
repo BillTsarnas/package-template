@@ -1,0 +1,40 @@
+{
+  "name": "billtsarnas/package-template",
+  "description": "A simple package template",
+  "keywords": [
+  ],
+  "authors": [
+    {
+      "name": "Vasileios Tsarnas",
+      "email": "vasileios.tsarnas@agentsoftware.net"
+    }
+  ],
+  "require": {
+    "php": "^8.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Billtsarnas\\PackageTemplate\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^3.9.5",
+    "phpunit/phpunit": "^11.5",
+    "phpstan/phpstan": "^1.10"
+  },
+  "scripts": {
+    "test": "phpunit",
+    "stan": "phpstan analyse",
+    "style": "php-cs-fixer fix",
+    "review": [
+      "@test",
+      "@stan",
+      "@style"
+    ]
+  }
+}
